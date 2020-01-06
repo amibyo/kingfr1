@@ -1,0 +1,113 @@
+
+
+<div class=" content">
+  <div class=" row">
+
+    <div class=" col-md">
+      <div class=" card">
+        <div class=" card-body">
+          <div class=" places-buttons">
+
+            <nav class="navbar navbar-expand-lg bg-info">
+              <div class="container">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor07" aria-controls="navbarColor07" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-bar navbar-kebab"></span>
+                  <span class="navbar-toggler-bar navbar-kebab"></span>
+                  <span class="navbar-toggler-bar navbar-kebab"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor07">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a [routerLink]="['/Createmaintenence']">Nouvelle Maintenance  <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a [routerLink]="['/repare']"> Sortie Maintenance </a>
+                    </li>
+                    <li class="nav-item">
+                      <a [routerLink]="['/maintenence']"> Gestion Maintenance </a>
+                    </li>
+                  </ul>
+                  <form class="form-inline ml-auto">
+                    <div class="form-group no-border">
+                      <input type="text" class="form-control" placeholder="Search" />
+                    </div>
+                    <button type="submit" class="btn btn-link btn-icon btn-round">
+                      <i class="tim-icons icon-zoom-split"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="card card-nav-tabs">
+      <div class="card-header card-header-success">
+        Fiche de reception :
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>Identifiant de l'article :</p>
+          <footer class="blockquote-footer">{{maintenance.id}}
+            <cite title="Source Title"></cite>
+          </footer>
+          <p>Nom de Client :</p>
+          <footer class="blockquote-footer">{{maintenance.nomc}}
+            <cite title="Source Title"></cite>
+          </footer>
+          <p>Prenom de Client :</p>
+          <footer class="blockquote-footer">{{maintenance.prec}}
+            <cite title="Source Title"></cite>
+          </footer>
+          <p>Numero telephone de Client :</p>
+          <footer class="blockquote-footer">{{maintenance.telc}}
+            <cite title="Source Title"></cite>
+          </footer>
+          <p>Nom de L'appareil :</p>
+          <footer class="blockquote-footer">{{maintenance.nomapp}}
+            <cite title="Source Title"></cite>
+          </footer>
+          <p>Model de L'appareil :</p>
+          <footer class="blockquote-footer">{{maintenance.modelapp}}
+            <cite title="Source Title"></cite>
+          </footer>
+          <p>Description de panne :</p>
+          <footer class="blockquote-footer">{{maintenance.panne}}
+            <cite title="Source Title"></cite>
+          </footer>
+          <p>Date d'entree :</p>
+          <footer class="blockquote-footer">{{ maintenance.dateE| date: 'dd/MM/yyyy hh:mm a' }}
+            <cite title="Source Title"></cite>
+          </footer>
+          <p>Date de Sortie :</p>
+          <footer class="blockquote-footer">{{ maintenance.dateS| date: 'dd/MM/yyyy hh:mm a' }}
+            <cite title="Source Title"></cite>
+          </footer>
+          <p>Nom de Recepteur  :</p>
+          <footer class="blockquote-footer">{{maintenance.user}}
+            <cite title="Source Title"></cite>
+          </footer>
+          <p>Nom de Technicien  :</p>
+          <footer class="blockquote-footer">{{maintenance.tech}}
+            <cite title="Source Title"></cite>
+          </footer>
+          <p>Prix de Maintenance :</p>
+          <footer class="blockquote-footer">{{maintenance.prix}}
+            <cite title="Source Title"></cite>
+          </footer>
+
+        </blockquote>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>

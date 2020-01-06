@@ -1,0 +1,278 @@
+
+
+<div class=" content">
+  <div class=" row">
+
+    <div class=" col-md">
+      <div class=" card">
+        <div class=" card-body">
+          <div class=" places-buttons">
+
+            <nav class="navbar navbar-expand-lg bg-info">
+              <div class="container">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor07" aria-controls="navbarColor07" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-bar navbar-kebab"></span>
+                  <span class="navbar-toggler-bar navbar-kebab"></span>
+                  <span class="navbar-toggler-bar navbar-kebab"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor07">
+                  <ul class="navbar-nav mr-auto">
+                    <h3> <li class="nav-item active">
+                      <a [routerLink]="['/vente']" class=" tim-icons">Vente   <span class="sr-only">(current)</span></a>
+                    </li></h3>
+                    <h3> <li class="nav-item">
+                      <a [routerLink]="['/create']" class=" tim-icons"> Nouvelle  </a>
+                    </li></h3>
+                    <h3> <li class="nav-item">
+                      <a [routerLink]="['/article']" class=" tim-icons"> Gestion  </a>
+                    </li></h3>
+                    <h3>  <li class="nav-item" ngbDropdown>
+                      <a [routerLink]="['/cat']" class=" tim-icons"> Categorie  </a>
+                    </li></h3>
+                    <li class=" nav-item" ngbDropdown>
+                      <a
+                        class=" nav-link"
+                        data-toggle="dropdown"
+                        href="javascript:void(0)"
+                        ngbDropdownToggle
+                      >
+                        <div class=" notification d-none d-lg-block d-xl-block"></div>
+                        <i class=" tim-icons ">Vente  </i>
+
+                      </a>
+                      <ul class=" dropdown-menu-right dropdown-navbar" ngbDropdownMenu>
+                        <li class=" nav-link">
+                          <a [routerLink]="['/Informatique']" class=" nav-item" ngbDropdownItem>
+                            Accessoire Informatique
+                          </a>
+                        </li>
+                        <li class=" nav-link">
+                          <a [routerLink]="['/GSM']"  class=" nav-item" ngbDropdownItem>
+                            Accessoire GSM
+                          </a>
+                        </li>
+                        <li class=" nav-link">
+                          <a class=" nav-item" [routerLink]="['/info']" ngbDropdownItem>
+                            Piece Informatique
+                          </a>
+                        </li>
+                        <li class=" nav-link">
+                          <a class=" nav-item" [routerLink]="['/PieceGSM']" ngbDropdownItem>
+                            Piece GSM
+                          </a>
+                        </li>
+                        <li class=" nav-link">
+                          <a class=" nav-item" [routerLink]="['/Occasion']" ngbDropdownItem>
+                            Materiels Occasion
+                          </a>
+                        </li>
+                        <li class=" nav-link">
+                          <a class=" nav-item" [routerLink]="['/Autre']" ngbDropdownItem>
+                            Autre
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="form-inline ml-auto">
+                    <div class="form-group no-border">
+                      <input type="text" class="form-control" placeholder="Search" />
+                    </div>
+                    <button type="submit" class="btn btn-link btn-icon btn-round">
+                      <i class="tim-icons icon-zoom-split"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-md-8">
+      <div class=" card">
+        <div class=" card-header"><h5 class=" title"> Ajoutez votre article  </h5></div>
+        <div class=" card-body">
+
+          <form (ngSubmit)="onSubmit()">
+            <div class=" row">
+              <div class=" col-md-5 pr-md-1">
+                <div class=" form-group">
+                  <label> Nom : </label>
+                  <input
+                    class=" form-control"
+                    placeholder="Nom de votre article"
+                    type="text"
+                    id="nom" required [(ngModel)]="employee.nom" name="nom"
+                  />
+                </div>
+              </div>
+              <div class=" col-md-5">
+                <div class=" form-group">
+                  <label> Model : </label>
+                  <input
+                    class=" form-control"
+                    placeholder="Model d'article"
+                    type="text"
+                    id="des" required [(ngModel)]="employee.desc" name="desc"
+                  />
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+            <div class=" row">
+              <div class=" col-md-5 pr-md-1">
+                <label> Categorie : </label>
+                <div class="form-check">
+                  <div class="form-check form-check-radio">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="Accessoire Informatique" id="exampleRadios1" value="Accessoire Informatique" required [(ngModel)]="employee.cat">
+                      Accessoire Informatique
+                      <span class=" form-check-sign">
+                          <span class=" check"> </span>
+                        </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-check">
+                  <div class="form-check form-check-radio">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="Accessoire GSM" required [(ngModel)]="employee.cat">
+                      Accessoire GSM
+                      <span class=" form-check-sign">
+                          <span class=" check"> </span>
+                        </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-check">
+                  <div class="form-check form-check-radio">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="Piece Informatique" required [(ngModel)]="employee.cat">
+                      Piece Informatique
+                      <span class=" form-check-sign">
+                          <span class=" check"> </span>
+                        </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-check">
+                  <div class="form-check form-check-radio">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="Piece GSM" required [(ngModel)]="employee.cat">
+                      Piece GSM
+                      <span class=" form-check-sign">
+                          <span class=" check"> </span>
+                        </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-check">
+                  <div class="form-check form-check-radio">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="Materiels Occasion" required [(ngModel)]="employee.cat">
+                      Materiels Occasion
+                      <span class=" form-check-sign">
+                          <span class=" check"> </span>
+                        </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-check">
+                  <div class="form-check form-check-radio">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios6" value="Autre" required [(ngModel)]="employee.cat">
+                      Autre
+                      <span class=" form-check-sign">
+                          <span class=" check"> </span>
+                        </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class=" row">
+              <div class=" col-md-4 pr-md-1">
+                <div class=" form-group">
+              </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+            <div class=" row">
+              <div class=" col-md-4 pr-md-1">
+                <div class=" form-group">
+                  <label> Prix d'achat : </label>
+                  <input
+                    class=" form-control"
+                    placeholder=".DT"
+                    type="text"
+                    id="prixa" required [(ngModel)]="employee.prixa" name="prixa"
+                  />
+                </div>
+              </div>
+              <div class=" col-md-4 px-md-1">
+                <div class=" form-group">
+                  <label> Prix de vente : </label>
+                  <input
+                    class=" form-control"
+                    placeholder=".DT"
+                    type="text"
+                    id="prixv" required [(ngModel)]="employee.prixv"   name="prixv"
+                  />
+                </div>
+              </div>
+              <div class=" col-md-4 pl-md-1">
+                <div class=" form-group">
+                  <label> Quantite : </label>
+                  <input
+                    class=" form-control"
+                    placeholder="1"
+                    type="text"
+                    id="qte" required [(ngModel)]="employee.qte" name="qte"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class=" card-footer">
+              <button class=" btn btn-fill btn-danger" type="submit">Enregistrer</button>
+
+
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>

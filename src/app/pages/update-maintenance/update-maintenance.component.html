@@ -1,0 +1,171 @@
+
+
+<div class=" content">
+  <div class=" row">
+
+    <div class=" col-md">
+      <div class=" card">
+        <div class=" card-body">
+          <div class=" places-buttons">
+
+            <nav class="navbar navbar-expand-lg bg-info">
+              <div class="container">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor07" aria-controls="navbarColor07" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-bar navbar-kebab"></span>
+                  <span class="navbar-toggler-bar navbar-kebab"></span>
+                  <span class="navbar-toggler-bar navbar-kebab"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor07">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a [routerLink]="['/Createmaintenence']">Nouvelle Maintenance  <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a [routerLink]="['/repare']"> Sortie Maintenance </a>
+                    </li>
+                    <li class="nav-item">
+                      <a [routerLink]="['/maintenence']"> Gestion Maintenance </a>
+                    </li>
+
+                  </ul>
+                  <form class="form-inline ml-auto">
+                    <div class="form-group no-border">
+                      <input type="text" class="form-control" placeholder="Search" />
+                    </div>
+                    <button type="submit" class="btn btn-link btn-icon btn-round">
+                      <i class="tim-icons icon-zoom-split"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-md-8">
+      <div class=" card">
+        <div class=" card-header"><h5 class=" title"> Modifier l'article  </h5></div>
+        <div class=" card-body">
+
+          <form (ngSubmit)="onSubmit()">
+            <div class=" row">
+              <div class=" col-md-5 pr-md-1">
+                <div class=" form-group">
+                  <label> Nom : </label>
+                  <input
+                    class=" form-control"
+                    placeholder="Nom de votre Client"
+                    type="text"
+                    id="cl" required [(ngModel)]="employee.nom" name="nom"
+                  />
+                </div>
+              </div>
+              <div class=" col-md-5">
+                <div class=" form-group">
+                  <label> Prenom Client : </label>
+                  <input
+                    class=" form-control"
+                    placeholder="Prenom de votre Client"
+                    type="text"
+                    id="pre" required [(ngModel)]="employee.desc" name="desc"
+                  />
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+            <div class=" row">
+              <div class=" col-md-8 pr-md-1">
+
+
+
+                <div class=" col-md-8 pr-md-1">
+                  <div class=" form-group">
+                    <label> Tel Client : </label>
+                    <input
+                      class=" form-control"
+                      placeholder="Numero de telephone  client"
+                      type="text"
+                      id="tel" required [(ngModel)]="employee.nom" name="nom"
+                    />
+                  </div>
+                </div>
+                <div class=" col-md-8">
+                  <div class=" form-group">
+                    <label> Article : </label>
+                    <input
+                      class=" form-control"
+                      placeholder="Nom d'appareil"
+                      type="text"
+                      id="app" required [(ngModel)]="employee.desc" name="desc"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class=" row">
+              <div class=" col-md-4 pr-md-1">
+                <div class=" form-group">
+                </div>
+              </div>
+            </div>
+
+            <div class=" row">
+              <div class=" col-md-4 pr-md-1">
+                <div class=" form-group">
+                  <label> Model  : </label>
+                  <input
+                    class=" form-control"
+                    placeholder="Model d'appareil"
+                    type="text"
+                    id="prix" required [(ngModel)]="employee.prixa" name="prixa"
+                  />
+                </div>
+              </div>
+              <div class=" col-md-4 px-md-1">
+                <div class=" form-group">
+                  <label> Panne : </label>
+                  <input
+                    class=" form-control"
+                    placeholder="Description de panne"
+                    type="text"
+                    id="panne" required [(ngModel)]="employee.prixv"   name="prixv"
+                  />
+                </div>
+              </div>
+              <div class=" col-md-4 pl-md-1">
+                <div class=" form-group">
+                  <label> Nom d' utilisateur : </label>
+                  <input
+                    class=" form-control"
+                    placeholder="Nom de recepteur"
+                    type="text"
+                    id="qte" required [(ngModel)]="employee.qte" name="qte"
+                  />
+                </div>
+              </div>
+
+            </div>
+            <div class=" card-footer">
+              <button class=" btn btn-fill btn-danger" type="submit">Enregistrer la modification</button>
+
+
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>

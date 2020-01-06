@@ -1,0 +1,133 @@
+
+<div class=" content">
+  <div class=" row">
+    <div class=" col-md">
+      <div class=" card">
+        <div class=" card-body">
+          <div class=" places-buttons">
+
+            <nav class="navbar navbar-expand-lg bg-info">
+              <div class="container">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor07" aria-controls="navbarColor07" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-bar navbar-kebab"></span>
+                  <span class="navbar-toggler-bar navbar-kebab"></span>
+                  <span class="navbar-toggler-bar navbar-kebab"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor07">
+                  <ul class="navbar-nav mr-auto">
+                    <h3> <li class="nav-item active">
+                      <a [routerLink]="['/vente']" class=" tim-icons">Vente   <span class="sr-only">(current)</span></a>
+                    </li></h3>
+                    <h3> <li class="nav-item">
+                      <a [routerLink]="['/create']" class=" tim-icons"> Nouvelle  </a>
+                    </li></h3>
+                    <h3> <li class="nav-item">
+                      <a [routerLink]="['/article']" class=" tim-icons"> Gestion  </a>
+                    </li></h3>
+                    <h3>  <li class="nav-item" ngbDropdown>
+                      <a [routerLink]="['/cat']" class=" tim-icons"> Categorie  </a>
+                    </li></h3>
+                    <li class=" nav-item" ngbDropdown>
+                      <a
+                        class=" nav-link"
+                        data-toggle="dropdown"
+                        href="javascript:void(0)"
+                        ngbDropdownToggle
+                      >
+                        <div class=" notification d-none d-lg-block d-xl-block"></div>
+                        <i class=" tim-icons ">Vente  </i>
+
+                      </a>
+                      <ul class=" dropdown-menu-right dropdown-navbar" ngbDropdownMenu>
+                        <li class=" nav-link">
+                          <a [routerLink]="['/Informatique']" class=" nav-item" ngbDropdownItem>
+                            Accessoire Informatique
+                          </a>
+                        </li>
+                        <li class=" nav-link">
+                          <a [routerLink]="['/GSM']"  class=" nav-item" ngbDropdownItem>
+                            Accessoire GSM
+                          </a>
+                        </li>
+                        <li class=" nav-link">
+                          <a class=" nav-item" [routerLink]="['/info']" ngbDropdownItem>
+                            Piece Informatique
+                          </a>
+                        </li>
+                        <li class=" nav-link">
+                          <a class=" nav-item" [routerLink]="['/PieceGSM']" ngbDropdownItem>
+                            Piece GSM
+                          </a>
+                        </li>
+                        <li class=" nav-link">
+                          <a class=" nav-item" [routerLink]="['/Occasion']" ngbDropdownItem>
+                            Materiels Occasion
+                          </a>
+                        </li>
+                        <li class=" nav-link">
+                          <a class=" nav-item" [routerLink]="['/Autre']" ngbDropdownItem>
+                            Autre
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="form-inline ml-auto">
+                    <div class="form-group no-border">
+                      <input type="text" class="form-control" placeholder="Search" />
+                    </div>
+                    <button type="submit" class="btn btn-link btn-icon btn-round">
+                      <i class="tim-icons icon-zoom-split"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+    </div>
+<div class=" col-md-8">
+  <div class=" card card-user">
+    <div class=" card-body">
+      <p class=" card-text"></p>
+      <div class=" author">
+        <div class=" block block-one"></div>
+        <div class=" block block-two"></div>
+        <div class=" block block-three"></div>
+        <div class=" block block-four"></div>
+        <h4>
+        <p class=" description">Article Details :</p></h4>
+        <div *ngIf="employee">
+          <div>
+            <h3>  <label><b>Nom: </b></label> {{employee.nom}}</h3>
+          </div>
+          <div>
+            <h3>   <label><b>Description: </b></label> {{employee.desc}}</h3>
+          </div>
+          <div>
+            <h3>  <label><b>Categorie: </b></label> {{employee.cat}}</h3>
+          </div>
+          <div>
+            <h3>  <label><b>Quantite: </b></label> {{employee.qte}}</h3>
+          </div>
+          <div>
+            <h3>  <label><b>Prix d'achet: </b></label> {{employee.prixa}}</h3>
+          </div>
+          <div>
+            <h3>   <label><b>Prix de vente: </b></label> {{employee.prixv}}</h3>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class=" card-footer">
+
+    </div>
+  </div>
+</div>
+  </div>
+</div>

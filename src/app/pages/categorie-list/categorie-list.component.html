@@ -1,0 +1,357 @@
+
+<div class=" content">
+  <div class=" row">
+  <div class=" col-md">
+    <div class=" card">
+      <div class=" card-body">
+        <div class=" places-buttons">
+
+          <nav class="navbar navbar-expand-lg bg-info">
+            <div class="container">
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor07" aria-controls="navbarColor07" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor07">
+                <ul class="navbar-nav mr-auto">
+                  <h3> <li class="nav-item active">
+                    <a [routerLink]="['/vente']" class=" tim-icons">Vente   <span class="sr-only">(current)</span></a>
+                  </li></h3>
+                  <h3> <li class="nav-item">
+                    <a [routerLink]="['/create']" class=" tim-icons"> Nouvelle  </a>
+                  </li></h3>
+                  <h3> <li class="nav-item">
+                    <a [routerLink]="['/article']" class=" tim-icons"> Gestion  </a>
+                  </li></h3>
+                  <h3>  <li class="nav-item" ngbDropdown>
+                    <a [routerLink]="['/cat']" class=" tim-icons"> Categorie  </a>
+                  </li></h3>
+                  <li class=" nav-item" ngbDropdown>
+                    <a
+                      class=" nav-link"
+                      data-toggle="dropdown"
+                      href="javascript:void(0)"
+                      ngbDropdownToggle
+                    >
+                      <div class=" notification d-none d-lg-block d-xl-block"></div>
+                      <i class=" tim-icons ">Vente  </i>
+
+                    </a>
+                    <ul class=" dropdown-menu-right dropdown-navbar" ngbDropdownMenu>
+                      <li class=" nav-link">
+                        <a [routerLink]="['/Informatique']" class=" nav-item" ngbDropdownItem>
+                          Accessoire Informatique
+                        </a>
+                      </li>
+                      <li class=" nav-link">
+                        <a [routerLink]="['/GSM']"  class=" nav-item" ngbDropdownItem>
+                          Accessoire GSM
+                        </a>
+                      </li>
+                      <li class=" nav-link">
+                        <a class=" nav-item" [routerLink]="['/info']" ngbDropdownItem>
+                          Piece Informatique
+                        </a>
+                      </li>
+                      <li class=" nav-link">
+                        <a class=" nav-item" [routerLink]="['/PieceGSM']" ngbDropdownItem>
+                          Piece GSM
+                        </a>
+                      </li>
+                      <li class=" nav-link">
+                        <a class=" nav-item" [routerLink]="['/Occasion']" ngbDropdownItem>
+                          Materiels Occasion
+                        </a>
+                      </li>
+                      <li class=" nav-link">
+                        <a class=" nav-item" [routerLink]="['/Autre']" ngbDropdownItem>
+                          Autre
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="form-inline ml-auto">
+                  <div class="form-group no-border">
+                    <input type="text" class="form-control" placeholder="Search" />
+                  </div>
+                  <button type="submit" class="btn btn-link btn-icon btn-round">
+                    <i class="tim-icons icon-zoom-split"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <div class=" row">
+
+    <div class=" col-md">
+      <div class=" card">
+        <div class=" card-header"><h5 class=" title"> Categorie : Accessoire Informatique  </h5></div>
+        <div class="panel-body">
+
+
+          <table class="table">
+            <thead>
+            <tr>
+              <th class="text-center">Nom</th>
+              <th class="text-center">Model</th>
+              <th class="text-center" >Categorie</th>
+              <th class="text-center" >Quantite </th>
+              <th class="text-center" >Prix d'achat</th>
+              <th class="text-center" >Prix de vente </th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+
+            <tr *ngFor="let employee of employees  |  async | paginate:{itemsPerPage: 10, currentPage:p}">
+              <td class="text-center" >{{employee.nom}}</td>
+              <td class="text-center" >{{employee.desc}}</td>
+              <td class="text-center" >{{employee.cat}}</td>
+              <td class="text-center" >{{employee.qte}}</td>
+              <td class="text-center" >{{employee.prixa}}  DT</td>
+              <td class="text-center" >{{employee.prixv}}  DT</td>
+
+
+            </tr>
+            </tbody>
+          </table>
+          <div id="pagination">
+            <pagination-controls (pageChange)="p=$event"></pagination-controls>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+
+
+  <div class=" row">
+
+    <div class=" col-md">
+      <div class=" card">
+        <div class=" card-header"><h5 class=" title"> Categorie : Accessoire GSM  </h5></div>
+        <div class="panel-body">
+
+
+          <table class="table">
+            <thead>
+            <tr>
+              <th class="text-center">Nom</th>
+              <th class="text-center">Model</th>
+              <th class="text-center" >Categorie</th>
+              <th class="text-center" >Quantite </th>
+              <th class="text-center" >Prix d'achat</th>
+              <th class="text-center" >Prix de vente </th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+
+            <tr *ngFor="let employee of cat2  |  async | paginate:{itemsPerPage: 10, currentPage:p}">
+              <td class="text-center" >{{employee.nom}}</td>
+              <td class="text-center" >{{employee.desc}}</td>
+              <td class="text-center" >{{employee.cat}}</td>
+              <td class="text-center" >{{employee.qte}}</td>
+              <td class="text-center" >{{employee.prixa}}  DT</td>
+              <td class="text-center" >{{employee.prixv}}  DT</td>
+
+
+            </tr>
+            </tbody>
+          </table>
+          <div id="pagination2">
+            <pagination-controls (pageChange)="p=$event"></pagination-controls>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class=" row">
+
+    <div class=" col-md">
+      <div class=" card">
+        <div class=" card-header"><h5 class=" title"> Categorie : Piece Informatique  </h5></div>
+        <div class="panel-body">
+
+
+          <table class="table">
+            <thead>
+            <tr>
+              <th class="text-center">Nom</th>
+              <th class="text-center">Model</th>
+              <th class="text-center" >Categorie</th>
+              <th class="text-center" >Quantite </th>
+              <th class="text-center" >Prix d'achat</th>
+              <th class="text-center" >Prix de vente </th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+
+            <tr *ngFor="let employee of cat3  |  async | paginate:{itemsPerPage: 10, currentPage:p}">
+              <td class="text-center" >{{employee.nom}}</td>
+              <td class="text-center" >{{employee.desc}}</td>
+              <td class="text-center" >{{employee.cat}}</td>
+              <td class="text-center" >{{employee.qte}}</td>
+              <td class="text-center" >{{employee.prixa}}  DT</td>
+              <td class="text-center" >{{employee.prixv}}  DT</td>
+
+
+            </tr>
+            </tbody>
+          </table>
+          <div id="pagination3">
+            <pagination-controls (pageChange)="p=$event"></pagination-controls>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class=" row">
+
+    <div class=" col-md">
+      <div class=" card">
+        <div class=" card-header"><h5 class=" title"> Categorie : Piece GSM  </h5></div>
+        <div class="panel-body">
+
+
+          <table class="table">
+            <thead>
+            <tr>
+              <th class="text-center">Nom</th>
+              <th class="text-center">Model</th>
+              <th class="text-center" >Categorie</th>
+              <th class="text-center" >Quantite </th>
+              <th class="text-center" >Prix d'achat</th>
+              <th class="text-center" >Prix de vente </th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+
+            <tr *ngFor="let employee of cat4  |  async | paginate:{itemsPerPage: 10, currentPage:p}">
+              <td class="text-center" >{{employee.nom}}</td>
+              <td class="text-center" >{{employee.desc}}</td>
+              <td class="text-center" >{{employee.cat}}</td>
+              <td class="text-center" >{{employee.qte}}</td>
+              <td class="text-center" >{{employee.prixa}}  DT</td>
+              <td class="text-center" >{{employee.prixv}}  DT</td>
+
+
+            </tr>
+            </tbody>
+          </table>
+          <div id="pagination4">
+            <pagination-controls (pageChange)="p=$event"></pagination-controls>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class=" row">
+
+    <div class=" col-md">
+      <div class=" card">
+        <div class=" card-header"><h5 class=" title"> Categorie : Materiels Occasion  </h5></div>
+        <div class="panel-body">
+
+
+          <table class="table">
+            <thead>
+            <tr>
+              <th class="text-center">Nom</th>
+              <th class="text-center">Model</th>
+              <th class="text-center" >Categorie</th>
+              <th class="text-center" >Quantite </th>
+              <th class="text-center" >Prix d'achat</th>
+              <th class="text-center" >Prix de vente </th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+
+            <tr *ngFor="let employee of cat5  |  async | paginate:{itemsPerPage: 10, currentPage:p}">
+              <td class="text-center" >{{employee.nom}}</td>
+              <td class="text-center" >{{employee.desc}}</td>
+              <td class="text-center" >{{employee.cat}}</td>
+              <td class="text-center" >{{employee.qte}}</td>
+              <td class="text-center" >{{employee.prixa}}  DT</td>
+              <td class="text-center" >{{employee.prixv}}  DT</td>
+
+
+            </tr>
+            </tbody>
+          </table>
+          <div id="pagination5">
+            <pagination-controls (pageChange)="p=$event"></pagination-controls>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+
+    <div class=" col-md">
+      <div class=" card">
+        <div class=" card-header"><h5 class=" title"> Categorie : Autre  </h5></div>
+        <div class="panel-body">
+
+
+          <table class="table">
+            <thead>
+            <tr>
+              <th class="text-center">Nom</th>
+              <th class="text-center">Model</th>
+              <th class="text-center" >Categorie</th>
+              <th class="text-center" >Quantite </th>
+              <th class="text-center" >Prix d'achat</th>
+              <th class="text-center" >Prix de vente </th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+
+            <tr *ngFor="let employee of cat6  |  async | paginate:{itemsPerPage: 10, currentPage:p}">
+              <td class="text-center" >{{employee.nom}}</td>
+              <td class="text-center" >{{employee.desc}}</td>
+              <td class="text-center" >{{employee.cat}}</td>
+              <td class="text-center" >{{employee.qte}}</td>
+              <td class="text-center" >{{employee.prixa}}  DT</td>
+              <td class="text-center" >{{employee.prixv}}  DT</td>
+
+
+            </tr>
+            </tbody>
+          </table>
+          <div id="pagination6">
+            <pagination-controls (pageChange)="p=$event"></pagination-controls>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- main app container -->
