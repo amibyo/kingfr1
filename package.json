@@ -67,7 +67,7 @@
     "@angular/router": "8.0.2",
     "@ng-bootstrap/ng-bootstrap": "4.2.1",
     "angular-material-source": "github:angular/material",
-    "chart.js": "2.8.0",
+    "chart.js": "2.9.4",
     "core-js": "3.1.4",
     "jw-angular-pagination": "latest",
     "ngx-pagination": "latest",
